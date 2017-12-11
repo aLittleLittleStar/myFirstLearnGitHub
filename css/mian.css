@@ -1,0 +1,533 @@
+/*清除浮动*/
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+}
+
+ul{
+	/*去掉ul的边距*/
+	margin: 0;
+}
+header{
+	/*不透明度*/
+	background: rgba(0,0,0,.4);
+}
+/*为顶部导航栏添加一个动画*/
+.header{
+    transition: all 1s;
+}
+.header_status_back{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav{
+	/*背景颜色变为透明让背景图片显示出来*/
+	background: transparent;
+	height: 50px;
+}
+#banner{
+	background: transparent;
+	height: 700px;
+}
+.article #banner{
+	height: 300px;
+} 
+nav ul{
+	list-style: none;
+	margin: 0;
+	float: right;
+}
+nav ul li,
+nav .logo{
+	/*横着排列*/
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+}
+nav ul li a{
+	line-height: 50px;
+	text-decoration: none;
+	/*变成行内元素*/
+	display: inline-block;
+	height: 50px;/*height: inherit;*/
+	color: #fff;
+
+}
+nav ul li a .icon-reorder{
+	margin-left: 10px;
+	line-height: 50px;
+	display: inline-block;
+}
+nav ul li.logo{
+	float: left;
+	padding: 10px;
+}
+.logo a{
+	padding: 20px;
+	text-decoration: none;
+}
+#banner .inner{
+	max-width: 300px;
+	/*文字居中*/
+	text-align: center;
+	margin: 0 auto;
+	/*设置定位之后可以设置位置top*/
+	position: relative;
+	top: 160px;
+	color: #fff;
+}
+.article #banner .inner{
+	top: 30px;
+}
+#banner .inner h1{
+	margin: 0;
+}
+
+button{
+	border: none;
+	background: #ed4933;
+	color: #eee;
+	padding: 14px;
+	border-radius: 3px;
+	/*先让返回按钮隐藏*/
+	display: none;
+}
+
+#banner button{
+	padding: 14px 60px;
+}
+/*设置线条动画*/
+#banner .inner .copy:before
+{
+	content: " ";
+	height: 2px;
+	width: 0;
+	/*width: 100%;*/
+	display: block;
+	position: absolute;
+	background: #fff;
+	top: -2%;
+	transition: all 1s;
+	left: 1px;
+	animation: anim 1s linear;
+	/*当动画完成时，动画会停留在最后一帧*/
+	animation-fill-mode: forwards;
+}
+#banner .inner .copy:after{
+	content: " ";
+	height: 2px;
+	width: 0;
+	/*width: 100%;*/
+	left: 100%;
+	
+	overflow: hidden;
+	position: absolute;
+	background: #fff;
+	top: 12%;
+
+	box-sizing: border-box;
+	/*线性变化*/
+
+	animation: anima 1s  linear;
+	/*当动画完成时，动画会停留在最后一帧*/
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes anim{
+	
+	0%{width: 0;}
+	100%{width: 100%;}
+}
+@-webkit-keyframes anima{
+	0%{left: 100%;width: 0;}
+	50%{left: 50%;width: 50%;}
+	100%{left: 0%;width: 100%;}
+}
+
+#banner .inner .more{
+	margin-top: 320px;
+}
+/*这个class是给h2标题下面的小标题加的
+一个类设置一下行高和字体大小*/
+.sub-heading{
+	line-height: 30px;
+	margin: 30px 0;
+	font-size: 18px;
+}
+
+.logo{
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.logo a{
+	color: #fff;
+}
+/*缺失一部分代码开始*/
+.active{
+	border-bottom: 2px solid #fff;
+}
+h1{
+	padding: 12px;
+	/*设置文字上下的白色线条*/
+	/*border-top: 2px solid #fff;*/
+	/*border-bottom: 2px solid #fff;*/
+}
+
+.article h1{
+	border: none;
+}
+h2{
+	font-size: 30px;
+}
+h3{
+	font-size: 24px;
+    line-height: 1.75em;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*设置为全局的*/
+p{
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+.hr{
+	width: 100%;
+	height: 2px;
+	/*设置margin上下为20左右为0*/
+	margin: 20px auto;
+}
+#main-btn{
+	font-size: 20px;
+	letter-spacing: 4px;
+	border-radius: 6px;
+	background: #18a;
+}
+
+/*缺失代码结束*/
+
+
+.green-section{
+	/*让文字居中*/
+	text-align: center;
+	/*背景颜色*/
+	background: #089DB9;
+	/*文字颜色*/
+	color: #fff;
+	padding: 100px 0;
+}
+.green-section .hr{
+	background: #078E9F;
+	/*让green-section下面的hr的宽度变为60%*/
+	width: 60%;
+}
+
+/****
+  **
+  ***icon小图标
+  ***
+  ****/
+.green-section .icon-group .icon{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #fff;
+	transform: rotate(45deg);
+	margin: 20px;
+
+}
+.green-section .icon-group:before {
+    content: " ";
+}
+
+.icon-group{
+	margin-top: 60px;
+}
+.green-section .icon-group .icon i
+{
+	transform: rotate(-45deg);
+    margin: 25px auto;
+    position: absolute;
+    margin-left: -14px;
+}
+
+
+
+.wrapper{
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.gray-section{
+	background: #252F34;
+	color: #fff;
+	
+}
+.gray-section .img-section{
+	/*占整个页面的45%*/
+	width: 45%;
+}
+
+.img-section img{
+	/*占父元素的100%*/
+	width: 100%;
+}
+.gray-section .text-section{
+	width: 55%;
+}
+.article-preview > div{
+	/*向下一级*/
+	/*让父级元素下面的元素向左浮动*/
+	float: left;
+	/*问题二：当写第二页相同样式时两者之间有间隙*/
+	/*解决办法：重置外面的字体大小为0，*/
+	font-size: 0;
+	
+}
+/*奇数选择器*/
+.article-preview:nth-child(odd){
+	background: rgba(255,255,255,.1);
+}
+/*问题一：当设置.article-preview > div向左浮动的时候
+.text-section里面文章字体背景变白色*/
+/*解决办法：清除父元素浮动*/
+/*清除浮动*/
+/*after 就是这个元素之后添加样式
+content 是添加的内容，这个写法是空的意思，就是不添加内容
+display：block 是把这个元素变成块元素
+clear ：both 就是清除浮动的意思*/
+.article-preview:after{
+	content: ' ';
+	display: block;
+	clear: both;
+}
+.text-section{
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
+.text-section h2{
+	margin-bottom: 20px;
+}
+.text-section .sub-heading{
+	font-size: 22px;
+	margin-top: 0;
+}
+.text-section p{
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+/*.text-section 下面所有直系的元素*/
+.text-section > *{
+	max-width: 90%;
+}
+
+/*purple-section*/
+.purple-section{
+	padding: 80px;
+	background: #3F3965;
+	color: #fff;
+}
+.purple-section .heading-wrapper{
+	text-align: center;
+}
+.heading-wrapper .hr{
+	background: #373259;
+	width: 60%;
+}
+.card{
+	float: left;
+	width: 50%;
+	min-height: 430px;
+	padding: 50px;
+	height: 200px;
+	box-sizing: border-box;
+	border: 1px solid #fff;
+}
+.card-group li:before{
+    display: block;
+    color: #00ffcc;
+    position: absolute;
+/*    left: 1.75em;
+    top: 2.75em;*/
+    font-size: 1.5em;
+}
+
+.card:nth-child{
+	background: rgba(0,0,0,0.04);
+}
+.card:nth-child(2){
+	background: rgba(0,0,0,0.08);
+}
+.card:nth-child(3){
+	background: rgba(0,0,0,0.12);
+}
+.card:nth-child(4){
+	background: rgba(0,0,0,0.16);
+}
+.card:nth-child(5){
+	background: rgba(0,0,0,0.2);
+}
+.card:nth-child(6){
+	background: rgba(0,0,0,0.24);
+}
+footer{
+	background: #333;
+	color: #fff;
+	min-height: 200px;
+	/*让文字居中*/
+	text-align: center;
+}
+
+
+ul.share-group{
+	display: block;
+	width: 1080px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+.share-group li{
+	display: inline-block;
+	padding: 10px;
+}
+.copy{
+	padding-bottom: 20px;
+}
+.main-wrapper{
+	background: #444 url(../imgs/banner.jpg);
+	/*固定定位图片不能移动*/
+	background-attachment: fixed;
+	/*图片不重复*/
+	background-repeat: no-repeat;
+	/*图片以封面的形式展现：就是覆盖全屏*/
+	background-size: cover;
+	/*图片的位置*/
+	background-position: center;
+	/*溢出隐藏*/
+	/*解决水平方向出现滚动条的问题*/
+	overflow: hidden;
+
+}
+/*缺失部分*/
+.icon .to{
+	font-size: 46px;
+	text-align: center;
+	vertical-align: middle;
+	transform: rotate(-45deg);
+	position: relative;
+	top: 17px;
+	left: 3px;
+}
+/*缺失部分*/
+
+
+
+/*侧栏样式*/
+/*当点击出现侧边栏时要页面变暗*/
+.mask{
+	/*盖住全部页面*/
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0,0,0,.3);
+	display: none;					
+}
+#sidebar{
+	/*固定定位*/
+	position: fixed;
+	/*定位到顶部侧边*/
+	top: 0;
+	bottom: 0;
+	/*第一种方法：先让sidebar向右移动自身的宽度让其隐藏*/
+	/*right: -300px;*/
+	/*第二种方法：用css3的方法*/
+	right: 0;
+	-webkit-transform: translate(300px,0);
+	-moz-transform: translate(300px,0);
+	-ms-transform: translate(300px,0);
+	-o-transform: translate(300px,0);
+	transform: translate(300px,0);
+	width: 300px;
+	background: #333;
+	color: #fff;
+	padding: 20px 0;
+	/*动画过渡时间*/
+	/*transition: right 0.5s;*/
+	transition: all 0.5s;
+
+}
+#sidebar ul{
+	list-style: none;
+	/*重置样式*/
+	padding: 0;
+	margin: 0;
+}
+#sidebar ul li:nth-child(2) a{
+	margin-top: 40px;
+	/*display: block;*/
+
+}
+#sidebar ul a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 30px;
+	display: inline-block;
+    outline: 0;
+    /*变成大写*/
+    text-transform: uppercase;
+}
+.icon-remove:before {
+    border: 0;
+    cursor: pointer;
+    display: block;
+    height: 2em;
+    padding-left: 2em;
+    /*width: 2em;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    vertical-align: middle;
+}
+#sidebar ul a:hover{
+	background:#444;
+	width: 100%;
+}
+/*返回顶部按钮样式*/
+.back-to-top{
+	/*固定到右下角*/
+	/*以浏览器窗口为参照物*/
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	/*border: 1px solid #888;*/
+	border-radius: 3px;
+	background: #444;
+}
+
+/*单独一页的样式*/
+.article .content{
+	background: #fefefe;
+}
+
+.content_wrapper{
+	width: 1080px;
+	margin: 0 auto;
+}
+.article_info{
+	font-size: 14px;
+	color: #888;
+	padding: 15px 0;
+}
+article{
+	line-height: 2;
+	padding: 10px 0;
+}
